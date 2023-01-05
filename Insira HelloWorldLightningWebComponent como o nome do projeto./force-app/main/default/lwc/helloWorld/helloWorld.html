@@ -1,0 +1,45 @@
+<template>
+    <lightning-card title="Lead" icon-name='action:new_contact'>
+      <div class="slds-m-around_medium">
+        <h1 class="slds-text-heading-large">
+          Empresa
+        </h1>
+        <p>Empresa: {empresa.empresa} </p>
+        <p>CNPJ: {empresa.cnpj}</p>
+        <p>Endereço: {empresa.endereco}</p>
+      </div>
+  
+      <div class="slds-m-around_medium" if:true={visible}>
+        <h1 class="slds-text-heading-large">
+          Produtos
+        </h1>
+        <p>Produto:{produto.produto} </p>
+        <p>Descrição: {produto.descricao} </p>
+        <p>preço: {produto.preco}</p>
+      </div>
+  
+      <div class="slds-m-around_medium" if:true={visible}>
+        <h1 class="slds-text-heading-large">
+          Promocao
+        </h1>
+        <p>Promoção:{promocao.promocao} </p>
+        <p>Oferta1: {promocao.oferta1} </p>
+        <p>Oferta2: {promocao.oferta2}</p>
+      </div>
+      <!-- Brand variant: Identifies the primary action in a group of buttons -->
+      <lightning-button variant="brand" label="Aparecer div 2 e 3" title="Primary action" onclick={trocarDiv}
+        class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+  
+    <lightning-card title="Lead" icon-name='action:new_contact'>
+      <div class="slds-m-around_medium">
+        <h1 class="slds-text-heading-large">
+          Quem é esse pokemon?
+        </h1>
+  
+        <img src='{imagem1}' width="200px" height="200px" onclick={trocarImagem}></img>
+  
+      </div>
+    </lightning-card>
+  
+  </template>
